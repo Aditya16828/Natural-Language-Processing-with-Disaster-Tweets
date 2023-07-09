@@ -1,0 +1,21 @@
+# Real Disaster Tweet Classification using Machine Learning
+
+- Participated in a competition focused on developing a machine learning model to predict whether tweets are about real disasters.
+- Cleaned and preprocessed the dataset consisting of 10,000 tweets using various techniques:
+    - Checked for null values and identified ***2533 null values** in the `location` column* and ***61 null values** in the `keyword` column*.
+    - Conducted text preprocessing, including removal of links, extraction of hashtags, removal of mentions, removal of stopwords, and lemmatization.
+    - Extracted locations from the clean text to treat null values in the `location` column.
+    - Used extracted hashtags to treat null values in the `keyword` column.
+    - Replaced remaining null values with "NA".
+    - Added additional columns: `text_length` (length of the text) and `word_count` (number of words in the cleaned text).
+    - Removed unnecessary columns to streamline the dataset.
+    - Utilized Count Vectorizer and TF-IDF Vectorizer for text vectorization, with Count Vectorizer yielding better accuracy.
+- After vectorization, the *dataset had **5 rows and 14996 columns***.
+- Split the dataset into training and testing sets for model evaluation.
+- Implemented the following *algorithms* for modeling:
+    - Gaussian Naive Bayes
+    - Decision Tree Classifier
+    - Random Forest Classifier
+    - Logistic Regression
+    - Bernoulli Naive Bayes
+- Achieved the highest *accuracy score of **0.8025*** on the testing dataset using the Bernoulli Naive Bayes model.
